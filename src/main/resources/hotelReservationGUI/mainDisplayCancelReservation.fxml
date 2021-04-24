@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotelReservationGUI.CancelReservationController">
+   <children>
+      <Pane layoutX="-6.0" prefHeight="135.0" prefWidth="956.0" style="-fx-background-color: #20B2AA;">
+         <children>
+            <ImageView fitHeight="104.0" fitWidth="151.0" layoutX="34.0" layoutY="31.0">
+               <image>
+                  <Image url="@img/hotel-building-icon-png-5.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <AnchorPane layoutY="134.0" prefHeight="417.0" prefWidth="200.0" style="-fx-background-color: #708090;" />
+      <Pane layoutX="200.0" layoutY="442.0" prefHeight="110.0" prefWidth="367.0" style="-fx-background-color: #A52A2A;">
+         <children>
+            <Button fx:id="btn_remove" layoutY="-5.0" mnemonicParsing="false" onAction="#removeBookingAction" prefHeight="79.0" prefWidth="367.0" style="-fx-background-color: transparent;" text="Remove" textFill="#f5f5f5">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="565.0" layoutY="442.0" prefHeight="110.0" prefWidth="385.0" style="-fx-background-color: #708090;">
+         <children>
+            <Button fx:id="btn_return_to_menu" layoutX="-5.0" layoutY="-2.0" mnemonicParsing="false" onAction="#returnToMenuAction" prefHeight="73.0" prefWidth="391.0" style="-fx-background-color: transparent;" text="Return To Menu" textFill="#f5f5f5">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="409.0" layoutY="102.0" prefHeight="94.0" prefWidth="312.0" style="-fx-background-color: #708090;">
+         <children>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="25.0" prefHeight="17.0" prefWidth="286.0" text="CANCEL RESERVATION" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft Himalaya" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ListView fx:id="userReservations" layoutX="222.0" layoutY="275.0" onMouseClicked="#removeReservation" prefHeight="135.0" prefWidth="665.0" />
+      <ChoiceBox fx:id="userHotelChoiceBox" layoutX="222.0" layoutY="236.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

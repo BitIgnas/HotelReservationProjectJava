@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="525.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotelReservationGUI.MainDisplayReservationController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="950.0">
+         <top>
+            <AnchorPane prefHeight="134.0" prefWidth="950.0" style="-fx-background-color: #20B2AA;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="109.0" fitWidth="158.0" layoutX="28.0" layoutY="21.0">
+                     <image>
+                        <Image url="@img/hotel-building-icon-png-5.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="422.0" layoutY="46.0" text="Grand Hotel Bookings" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Georgia Italic" size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="366.0" prefWidth="224.0" style="-fx-background-color: #708090;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="102.0" layoutY="31.0" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Himalaya" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="35.0" layoutY="268.0">
+                     <image>
+                        <Image url="@img/600px-Windows_Settings_app_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btn_settings" layoutX="60.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="SETTINGS" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_logout" layoutX="60.0" layoutY="305.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: transparent;" text="LOG OUT" textFill="WHITE" />
+                  <ImageView fitHeight="23.0" fitWidth="30.0" layoutX="34.0" layoutY="306.0">
+                     <image>
+                        <Image url="@img/clipart2640924.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btn_settings" layoutX="35.0" layoutY="268.0" mnemonicParsing="false" onAction="#settingsAction" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: transparent;" />
+                  <Button fx:id="btn_logout" layoutX="34.0" layoutY="305.0" mnemonicParsing="false" onAction="#logOutAction" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="228.0" layoutY="126.0" prefHeight="32.0" prefWidth="179.0" style="-fx-background-color: #20B2AA;" />
+                  <AnchorPane layoutX="172.0" layoutY="-33.0" prefHeight="94.0" prefWidth="312.0" style="-fx-background-color: #708090;">
+                     <children>
+                        <Label layoutX="78.0" layoutY="22.0" prefHeight="50.0" prefWidth="188.0" text="RESERVATION" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft Himalaya" size="34.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Pane layoutX="26.0" layoutY="249.0" prefHeight="44.0" prefWidth="674.0" style="-fx-background-color: #708090;">
+                     <children>
+                        <DatePicker fx:id="checkOutDate" layoutX="209.0" layoutY="10.0" style="-fx-background-color: transparent; -fx-background-color: #20B2AA;" />
+                        <Label layoutX="9.0" layoutY="9.0" prefHeight="27.0" prefWidth="202.0" text="ENTER CHECK OUT" textFill="WHITE">
+                           <font>
+                              <Font name="Sitka Small" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="26.0" layoutY="121.0" prefHeight="44.0" prefWidth="674.0" style="-fx-background-color: #708090;">
+                     <children>
+                        <Label layoutX="72.0" layoutY="9.0" prefHeight="27.0" prefWidth="123.0" text="HOTEL" textFill="WHITE">
+                           <font>
+                              <Font name="Sitka Small" size="20.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="hotelCheckBox" layoutX="210.0" layoutY="10.0" prefHeight="25.0" prefWidth="173.0" />
+                        <Label fx:id="selectedHotelLabel" layoutX="411.0" layoutY="9.0" prefHeight="27.0" prefWidth="123.0" textFill="WHITE">
+                           <font>
+                              <Font name="Sitka Small" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="hotelErrorLog" layoutX="411.0" layoutY="9.0" prefHeight="27.0" prefWidth="243.0" textFill="#ff0606">
+                           <font>
+                              <Font name="Sitka Small" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <AnchorPane layoutY="359.0" prefHeight="64.0" prefWidth="351.0" style="-fx-background-color: #3CB371;">
+                     <children>
+                        <Button fx:id="btn_addReservation" layoutX="-3.0" layoutY="-13.0" mnemonicParsing="false" onAction="#addReservation" prefHeight="77.0" prefWidth="354.0" style="-fx-background-color: transparent;" text="Add Reservation" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="19.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="351.0" layoutY="359.0" prefHeight="67.0" prefWidth="375.0" style="-fx-background-color: #A52A2A;">
+                     <children>
+                        <Button fx:id="btn_cancel" layoutX="-4.0" layoutY="-14.0" mnemonicParsing="false" onAction="#cancelAction" prefHeight="77.0" prefWidth="380.0" style="-fx-background-color: transparent;" text="Cancel" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="19.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="reservationLog" layoutX="26.0" layoutY="299.0" prefHeight="15.0" prefWidth="383.0" textFill="MEDIUMSEAGREEN">
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="26.0" layoutY="185.0" prefHeight="44.0" prefWidth="674.0" style="-fx-background-color: #708090;">
+                     <children>
+                        <DatePicker fx:id="checkInDate" layoutX="209.0" layoutY="10.0" style="-fx-background-color: transparent; -fx-background-color: #20B2AA;" />
+                        <Label layoutX="14.0" layoutY="9.0" prefHeight="27.0" prefWidth="211.0" text="ENTER CHECK IN" textFill="WHITE">
+                           <font>
+                              <Font name="Sitka Small" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="datePickerErrorLog" layoutX="412.0" layoutY="9.0" prefHeight="27.0" prefWidth="224.0" textFill="#f80000">
+                           <font>
+                              <Font name="Sitka Small" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <AnchorPane layoutY="475.0" prefHeight="50.0" prefWidth="224.0" style="-fx-background-color: #708090;" />
+   </children>
+</AnchorPane>
