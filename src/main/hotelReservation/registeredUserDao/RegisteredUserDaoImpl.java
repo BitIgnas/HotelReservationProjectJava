@@ -30,11 +30,7 @@ public class RegisteredUserDaoImpl implements RegisteredUserDao{
         Query query = session.createQuery(criteriaQuery);
         List<RegisteredUser> userList = query.getResultList();
 
-        if(userList.size() != 0){
-            return true;
-        } else {
-            return false;
-        }
+        return userList.size() > 1 ? true : false;
     }
 
     @Override
